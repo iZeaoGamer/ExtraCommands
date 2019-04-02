@@ -12,9 +12,9 @@ commands:
            description: Feeds you
         food:
            description: Gives you 8 bread
-       gmc:
+        gmc:
            description: Set gamemode to creative mode
-       gms:
-            description: Set gamemode to survival mode
-       gma:
-             description: Set gamemode to adventure mode  
+        gms:
+           description: Set gamemode to survival mode
+        gma:
+           description: Set gamemode to adventure mode  
