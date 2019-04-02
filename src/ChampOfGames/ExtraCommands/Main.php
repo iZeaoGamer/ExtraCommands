@@ -107,7 +107,7 @@ class Main extends PluginBase {
 		  $sender->sendMessage($this->fts . TF::RED . " You don't have");
 		
 	  return true;
-	      }
+	     }
       }
    }
 }
