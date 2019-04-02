@@ -1,0 +1,20 @@
+name: ExtraCommands
+main: ChampOfGames\ExtraCommands\Main
+api: 3.0.0
+version: 1.0
+author: ChampOfGames
+commands:
+        fly:
+           description: Set yourelf into the flymode
+        heal:
+           description: Heals you
+        feed:
+           description: Feeds you
+        food:
+           description: Gives you 8 bread
+       gmc:
+           description: Set gamemode to creative mode
+       gms:
+            description: Set gamemode to survival mode
+       gma:
+             description: Set gamemode to adventure mode  
