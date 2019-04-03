@@ -12,10 +12,10 @@ use pocketmine\item\Item;
 
 class Main extends PluginBase {
 	
+	public $fts = "§4[§bExtraCommands§4]";
+	
 	public function onEnable() {
 	
-		public $fts = "§4[§bExtraCommands§4]";
-		
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
