@@ -14,7 +14,8 @@ class Main extends PluginBase {
 	
 	public function onEnable() {
 	
-	public $fts = "§8[§bExtraCommnds:]";
+		public $fts = "§4[§bExtraCommands§4]";
+		
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
