@@ -14,7 +14,7 @@ class Main extends PluginBase {
 	
 	public function onEnable() {
 	
-	
+	public $fts = "§8[§bExtraCommnds:]";
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
@@ -96,7 +96,7 @@ class Main extends PluginBase {
 				
 			  if($args[0] == "on") {
 				$sender->setAllowFlight(true);
-				$sender->sendMessage($this->fts . TF::GREEN . " FlugModus wurde aktiviert");
+				$sender->sendMessage($this->fts . TF::GREEN . " Flymode activated");
 				}
 			  if($args[0] == "off") {
 				$sender->setAllowFlight(false);
@@ -104,7 +104,7 @@ class Main extends PluginBase {
 				}
 		     }
 		  }else{
-		  $sender->sendMessage($this->fts . TF::RED . " You don't have");
+		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
 		
 	  return true;
 	     }
