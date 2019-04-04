@@ -22,6 +22,7 @@ class Main extends PluginBase {
    
    if($cmd->getName() == "food") {
      if($sender instanceof Player) {
+     if($sender->hasPermission("fe.use")) {    
      	$sender->getInventory()->addItem(Item::get(297, 0, 8));
      	$sender->getlevel()->addSound(new PopSound($sender));
          $sender->sendMessage($this->fts . TF::GREEN . "You have got bread!");
