@@ -26,6 +26,9 @@ class Main extends PluginBase {
      	$sender->getInventory()->addItem(Item::get(297, 0, 8));
      	$sender->getlevel()->addSound(new PopSound($sender));
          $sender->sendMessage($this->fts . TF::GREEN . "You have got bread!");
+	 }else{ 
+	 $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
+            }
          }
        return true;
     }
