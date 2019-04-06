@@ -20,3 +20,6 @@ Discord:https://discord.gg/teJbuGM
  
  /fly fly.use
  
+/day day.use
+
+/night night.use
