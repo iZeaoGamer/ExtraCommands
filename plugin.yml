@@ -18,3 +18,7 @@ commands:
     description: Set gamemode to survival mode
   gma:
     description: Set gamemode to adventure mode  
+  day 
+    description: Set time to day
+  night:
+     description: Set time to night
