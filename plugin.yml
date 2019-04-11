@@ -22,3 +22,5 @@ commands:
     description: Set time to day
   night:
      description: Set time to night
+  giveall:
+     description: Give everyone an item
