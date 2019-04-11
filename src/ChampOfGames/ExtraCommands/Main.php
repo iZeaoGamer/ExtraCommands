@@ -8,16 +8,12 @@ use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\Player;
 use pocketmine\level\sound\PopSound;
-use pocketmine\item\Item;
-use pocketmine\event\Listener;
-use pocketmine\item\Item;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase{
 	
 	public $fts = "§4[§bExtraCommands§4]";
 	
-	public function onEnable() {
-	$this->getServer()->getPluginManager()->registerEvents($this, $this);	
+	public function onEnable() {	
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
