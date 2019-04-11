@@ -34,31 +34,7 @@ class Main extends PluginBase implements Listener{
          }
        return true;
     }
-		
-   if($cmd->getName() == "giveall") {
-     if($sender instanceof Player) {
-     if($sender->hasPermission("giveall.use")) {    
-     if(!(count($args) === 1 or count($args) === 2)) {
-     if (!(isset ($args[1]))) {
-				$args[1] = 1;     
-	     $item = $this->getServer()->getPlayerExact($sender->getName())->getInventory()->getItemInHand();
-			}else{
-	 			$item = Item::fromString($args[0]);
-	     $item->setCount((int)$args[1]);
-			if ($item->getId() === 0) {
-				$sender->sendMessage("[ Giveall ] This is an unkown item.");
-	if ($args[1] <= 0 or $args[1] > 64) {
-	 		$sender->sendMessage("[ Giveall ] Please enter a number between 1 and 64.");
-		foreach ($this->getServer()->getOnlinePlayers() as $player) {
-	 			$player->getInventory()->addItem($item);
-         $sender->sendMessage($this->fts . TF::GREEN . "Everyone has got the item/s");
-	 }else{ 
-	 $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
-            }
-         }
-       return true;
-    }
-		
+	
    if($cmd->getName() == "heal") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("heal.use")) {
