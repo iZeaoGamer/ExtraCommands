@@ -23,5 +23,3 @@ Discord:https://discord.gg/teJbuGM
 /day day.use
 
 /night night.use
-
-/giveall giveall.use
