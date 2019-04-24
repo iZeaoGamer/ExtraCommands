@@ -58,7 +58,7 @@ class Main extends PluginBase{
 	   if($cmd->getName() == "gms") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gms.use")) {
-   	    $sender->setGamemode(s);
+   	    $sender->setGamemode(0);
             $sender->sendMessage($this->fts . TF::GREEN . "You have set your gamemode to survival mode!");
             }else{
             $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
@@ -70,7 +70,7 @@ class Main extends PluginBase{
          if($cmd->getName() == "gmc") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gmc.use")) {
-   	    $sender->setGamemode(c);
+   	    $sender->setGamemode(1);
             $sender->sendMessage($this->fts . TF::GREEN . " You have set your gamemode to creativ mode!");
             }else{
             $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
@@ -82,7 +82,7 @@ class Main extends PluginBase{
                if($cmd->getName() == "gma") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gma.use")) {
-   	    $sender->setGamemode(a);
+   	    $sender->setGamemode(2);
             $sender->sendMessage($this->fts . TF::GREEN . " You have set ypu gamemode to creativ mode!");
             }else{
             $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
