@@ -115,6 +115,62 @@ class Main extends PluginBase{
           return true;
       }	
 		
+if($cmd->getName() == "nv") {
+	  if($sender instanceof Player) {
+		if($sender->hasPermission("nv.use")) {
+			$sender->sendMessage($this->fts . TF::RED . " Syntax: /nv <on-off>");
+			if(!empty($args[0])) {
+				
+			  if($args[0] == "on") {
+				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
+						return true;
+				$sender->($this->fts . TF::GREEN . " Nightvision activated");
+				}
+			  if($args[0] == "off") {
+				if($sender->hasEffect(Effect::NIGHT_VISION){
+                                   $sender->removeEffect(NIGHT_VISION);
+				$sender->sendMessage($this->fts . TF::RED . " Nightvision deactivated");
+				}
+                    
+		     }
+		  }else{
+		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
+		
+	  return true;
+	     }
+	  }
+      }
+   }
+}
+
+if($cmd->getName() == "vanish") {
+	  if($sender instanceof Player) {
+		if($sender->hasPermission("vanish.use")) {
+			$sender->sendMessage($this->fts . TF::RED . " Syntax: /vanish <on-off>");
+			if(!empty($args[0])) {
+				
+			  if($args[0] == "on") {
+				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::INVISIBILITY), (99999999*20), (1), (false)));
+						return true;
+				$sender->($this->fts . TF::GREEN . " Vanish activated");
+				}
+			  if($args[0] == "off") {
+				if($sender->hasEffect(Effect::INVISIBILITY){
+                                   $sender->removeEffect(INVISIBILITY);
+				$sender->sendMessage($this->fts . TF::RED . " Nightvision deactivated");
+				}
+                    
+		     }
+		  }else{
+		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
+		
+	  return true;
+	     }
+	  }
+      }
+   }
+}
+
 	if($cmd->getName() == "fly") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("fly.use")) {
