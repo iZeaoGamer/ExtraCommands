@@ -2,6 +2,7 @@
 
 namespace ChampOfGames\ExtraCommands;
 
+use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
