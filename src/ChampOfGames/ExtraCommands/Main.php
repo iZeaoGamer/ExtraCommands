@@ -3,19 +3,20 @@
 namespace ChampOfGames\ExtraCommands;
 
 use pocketmine\entity\Effect;
+use pocketmine\entity\EffectInstance;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\Player;
 use pocketmine\level\sound\PopSound;
-
+ 
 class Main extends PluginBase{
-	
+	 
 	public $fts = "§4[§bExtraCommands§4]";
-
+ 
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
-   
+    
    if($cmd->getName() == "food") {
      if($sender instanceof Player) {
      if($sender->hasPermission("food.use")) {    
@@ -28,7 +29,7 @@ class Main extends PluginBase{
          }
        return true;
     }
-	
+	 
    if($cmd->getName() == "heal") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("heal.use")) {
@@ -40,7 +41,7 @@ class Main extends PluginBase{
             }
           return true;
       }
-        
+         
     if($cmd->getName() == "feed") {
    	if($sender instanceof Player) {
      	if($sender->hasPermission("feed.use")) {
@@ -52,7 +53,7 @@ class Main extends PluginBase{
             }
           return true;
       }
-	
+	 
 	   if($cmd->getName() == "gms") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gms.use")) {
@@ -64,7 +65,7 @@ class Main extends PluginBase{
             }
           return true;
       }
-      
+       
          if($cmd->getName() == "gmc") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gmc.use")) {
@@ -76,7 +77,7 @@ class Main extends PluginBase{
             }
           return true;
       }
-      
+       
                if($cmd->getName() == "gma") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gma.use")) {
@@ -88,7 +89,7 @@ class Main extends PluginBase{
             }
           return true;
       }
-		
+		 
       if($cmd->getName() == "day") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("day.use")) {
@@ -99,8 +100,8 @@ class Main extends PluginBase{
                }
             }
           return true;
-      }
-		
+      } 
+		 
 	if($cmd->getName() == "night") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("night.use")) {
@@ -121,12 +122,12 @@ if($cmd->getName() == "nv") {
 				
 			  if($args[0] == "on")
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
-						return true;
 				$sender->sendMessage($this->fts . TF::GREEN . " Nightvision activated");
+                return true;
 				}
 			  if($args[0] == "off") {
-				if($sender->hasEffect(Effect::NIGHT_VISION){
-                                   $sender->removeEffect(Effect::NIGHT_VISION);
+				if($sender->hasEffect(Effect::NIGHT_VISION)) {
+				    $sender->removeEffect(Effect::NIGHT_VISION);
 				$sender->sendMessage($this->fts . TF::RED . " Nightvision deactivated");
 				}
                     
@@ -138,8 +139,7 @@ if($cmd->getName() == "nv") {
 	     }
 	  }
       }
-   }
-
+ 
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
@@ -153,8 +153,8 @@ if($cmd->getName() == "vanish") {
                                         return true;
 				}
 			  if($args[0] == "off") {
-				if($sender->hasEffect(Effect::INVISIBILITY){
-                                   $sender->removeEffect(Effect::INVISIBILITY);
+				if($sender->hasEffect(Effect::INVISIBILITY)) {
+				    $sender->removeEffect(Effect::INVISIBILITY);
 				$sender->sendMessage($this->fts . TF::RED . " Vanish deactivated");
 				}
                     
@@ -167,13 +167,13 @@ if($cmd->getName() == "vanish") {
 	  }
       }
 }
-
+ 
 	if($cmd->getName() == "fly") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("fly.use")) {
 			$sender->sendMessage($this->fts . TF::RED . " Syntax: /fly <on-off>");
 			if(!empty($args[0])) {
-				
+		 		
 			  if($args[0] == "on") {
 				$sender->setAllowFlight(true);
 				$sender->sendMessage($this->fts . TF::GREEN . " Flymode activated");
