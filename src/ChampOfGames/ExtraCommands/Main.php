@@ -122,6 +122,7 @@ if($cmd->getName() == "nv") {
 			if(!empty($args[0])) {
 				
 			  if($args[0] == "on") {
+                                >setDisplayName($sender->getName());
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 						return true;
 				$sender->($this->fts . TF::GREEN . " Nightvision activated");
