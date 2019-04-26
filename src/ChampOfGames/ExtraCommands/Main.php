@@ -142,7 +142,6 @@ if($cmd->getName() == "nv") {
 	  }
       }
    }
-}
 
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
@@ -169,8 +168,6 @@ if($cmd->getName() == "vanish") {
 	     }
 	  }
       }
-   }
-}
 
 	if($cmd->getName() == "fly") {
 	  if($sender instanceof Player) {
