@@ -23,3 +23,7 @@ Discord:https://discord.gg/teJbuGM
 /day day.use
 
 /night night.use
+
+/nv/light/nightvision nv.use
+
+/vanis/v vanish.use
