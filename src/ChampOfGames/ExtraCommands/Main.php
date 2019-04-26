@@ -12,10 +12,7 @@ use pocketmine\level\sound\PopSound;
 class Main extends PluginBase{
 	
 	public $fts = "§4[§bExtraCommands§4]";
-	
-	public function onEnable() {	
-	}
-	
+
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
    
    if($cmd->getName() == "food") {
@@ -151,8 +148,8 @@ if($cmd->getName() == "vanish") {
 				
 			  if($args[0] == "on") {
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::INVISIBILITY), (99999999*20), (1), (false)));
-						return true;
-				$sender->($this->fts . TF::GREEN . " Vanish activated");
+				$sender->sendMessage($this->fts . TF::GREEN . " Vanish activated");
+                                        return true;
 				}
 			  if($args[0] == "off") {
 				if($sender->hasEffect(Effect::INVISIBILITY){
