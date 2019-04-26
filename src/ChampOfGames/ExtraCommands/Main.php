@@ -122,7 +122,7 @@ if($cmd->getName() == "nv") {
                                 >setDisplayName($sender->getName());
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 						return true;
-				$sender->($this->fts . TF::GREEN . " Nightvision activated");
+				$sender->sendMessage($this->fts . TF::GREEN . " Nightvision activated");
 				}
 			  if($args[0] == "off") {
 				if($sender->hasEffect(Effect::NIGHT_VISION){
@@ -154,7 +154,7 @@ if($cmd->getName() == "vanish") {
 			  if($args[0] == "off") {
 				if($sender->hasEffect(Effect::INVISIBILITY){
                                    $sender->removeEffect(INVISIBILITY);
-				$sender->sendMessage($this->fts . TF::RED . " Nightvision deactivated");
+				$sender->sendMessage($this->fts . TF::RED . " Vanish deactivated");
 				}
                     
 		     }
