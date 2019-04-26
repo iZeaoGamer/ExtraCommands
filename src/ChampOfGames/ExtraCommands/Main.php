@@ -125,7 +125,7 @@ if($cmd->getName() == "nv") {
 				}
 			  if($args[0] == "off") {
 				if($sender->hasEffect(Effect::NIGHT_VISION){
-                                   $sender->removeEffect(NIGHT_VISION);
+                                   $sender->removeEffect(Effect::NIGHT_VISION);
 				$sender->sendMessage($this->fts . TF::RED . " Nightvision deactivated");
 				}
                     
