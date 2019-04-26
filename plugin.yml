@@ -22,3 +22,9 @@ commands:
     description: Set time to day
   night:
      description: Set time to night
+  nv:
+     description: Gives you nightvision
+     aliases: ["nightvision", "light"]
+  vanish:
+     description: Set you in vanish mode
+     aliases: ["v"]
