@@ -153,7 +153,7 @@ if($cmd->getName() == "vanish") {
 				}
 			  if($args[0] == "off") {
 				if($sender->hasEffect(Effect::INVISIBILITY){
-                                   $sender->removeEffect(INVISIBILITY);
+                                   $sender->removeEffect(Effect::INVISIBILITY);
 				$sender->sendMessage($this->fts . TF::RED . " Vanish deactivated");
 				}
                     
