@@ -118,8 +118,7 @@ if($cmd->getName() == "nv") {
 			$sender->sendMessage($this->fts . TF::RED . " Syntax: /nv <on-off>");
 			if(!empty($args[0])) {
 				
-			  if($args[0] == "on") {
-                                >setDisplayName($sender->getName());
+			  if($args[0] == "on")
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 						return true;
 				$sender->sendMessage($this->fts . TF::GREEN . " Nightvision activated");
@@ -147,6 +146,7 @@ if($cmd->getName() == "vanish") {
 			if(!empty($args[0])) {
 				
 			  if($args[0] == "on") {
+                                $sender->setDisplayName($sender->getName());
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::INVISIBILITY), (99999999*20), (1), (false)));
 				$sender->sendMessage($this->fts . TF::GREEN . " Vanish activated");
                                         return true;
