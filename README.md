@@ -26,6 +26,6 @@ Discord:https://discord.gg/teJbuGM
 
 /nv /light /nightvision nv.use
 
-/vanis /v vanish.use
+/vanish /v vanish.use
 
 /cclear /chatclear cclear.use
