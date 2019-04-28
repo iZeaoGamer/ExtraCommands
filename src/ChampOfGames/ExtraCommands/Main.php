@@ -102,6 +102,20 @@ class Main extends PluginBase{
           return true;
       } 
 		 
+if($cmd->getName() == "cclear") {
+foreach($this->getServer()->getOnlinePlayers() as $player) {
+        $player->sendMessage("n\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\n $this->fts . TF::GREEN . Chat cleared");
+   	if($sender instanceof Player) {
+   	 if($sender->hasPermission("ccclear.use")) {
+            }else{
+            $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
+               }
+            }
+          return true;
+      }
+  }
+
+
 	if($cmd->getName() == "night") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("night.use")) {
