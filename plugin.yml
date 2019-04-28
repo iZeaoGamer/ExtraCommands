@@ -1,6 +1,6 @@
 name: ExtraCommands
 main: ChampOfGames\ExtraCommands\Main
-version: 1.0.0
+version: 1.4.3
 api: 3.0.0
 author: ChampOfGamesYT
 commands:
@@ -28,3 +28,6 @@ commands:
   vanish:
      description: Set you in vanish mode
      aliases: ["v"]
+  cclear:
+     description: Clears the chat
+     aliases: [chatclear]
