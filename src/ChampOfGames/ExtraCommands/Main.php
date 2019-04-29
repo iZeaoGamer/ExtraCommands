@@ -70,7 +70,7 @@ class Main extends PluginBase{
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gmc.use")) {
    	    $sender->setGamemode(1);
-            $sender->sendMessage($this->fts . TF::GREEN . " You have set your gamemode to creativ mode!");
+            $sender->sendMessage($this->fts . TF::GREEN . " You have set your gamemode to creative mode!");
             }else{
             $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
                }
@@ -82,7 +82,7 @@ class Main extends PluginBase{
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("gma.use")) {
    	    $sender->setGamemode(2);
-            $sender->sendMessage($this->fts . TF::GREEN . " You have set your gamemode to creativ mode!");
+            $sender->sendMessage($this->fts . TF::GREEN . " You have set your gamemode to creative mode!");
             }else{
             $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
                }
@@ -132,16 +132,16 @@ if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("nv.use")) 
 			if(!empty($args[0])) {
-				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>
+				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>");
 			  if($args[0] == "on")
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
-				$sender->sendMessage($this->fts . TF::GREEN . " Nightvision activated");
+				$sender->sendMessage($this->fts . TF::GREEN . " Night vision activated");
                 return true;
 				}
 			  if($args[0] == "off") {
 				if($sender->hasEffect(Effect::NIGHT_VISION)) {
 				    $sender->removeEffect(Effect::NIGHT_VISION);
-				$sender->sendMessage($this->fts . TF::RED . " Nightvision deactivated");
+				$sender->sendMessage($this->fts . TF::RED . " Night vision deactivated");
 				}
                     
 		     }
