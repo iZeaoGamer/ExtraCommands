@@ -181,7 +181,7 @@ if($cmd->getName() == "vanish") {
 }
  
 	if($cmd->getName() == "fly"){
-        if($sender->instanceof Player){
+        if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
 			if(!empty($args[0])) {
 		 		$sender->sendMessage($this->fts . TF::RED . "Syntax fly <on/off>");
