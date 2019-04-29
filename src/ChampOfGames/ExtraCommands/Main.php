@@ -88,6 +88,18 @@ class Main extends PluginBase{
           return true;
       }
 		 
+if($cmd->getName() == "gmspc") {
+   	if($sender instanceof Player) {
+   	 if($sender->hasPermission("gmspc.use")) {
+   	    $sender->setGamemode(3);
+            $sender->sendMessage($this->fts . TF::GREEN . " You have set your gamemode to spectator mode!");
+            }else{
+            $sender->sendMessage($this->fts . TF::RED . "You are not allowed to use this command");
+               }
+            }
+          return true;
+      }
+
       if($cmd->getName() == "day") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("day.use")) {
