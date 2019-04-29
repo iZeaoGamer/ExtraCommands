@@ -114,7 +114,7 @@ if($cmd->getName() == "gmspc") {
 		 
 if($cmd->getName() == "cclear") {
 foreach($this->getServer()->getOnlinePlayers() as $player) {
-        $player->sendMessage("n\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\nn\n\n\n\n\n $this->fts . TF::GREEN . Chat cleared");
+        $player->sendMessage("n\n\n\n\n\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n $this->fts . TF::GREEN . Chat cleared");
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("ccclear.use")) {
             }else{
