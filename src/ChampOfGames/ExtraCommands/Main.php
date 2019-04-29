@@ -1,7 +1,5 @@
 <?php
-
 namespace ChampOfGames\ExtraCommands;
-
 use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 use pocketmine\plugin\PluginBase;
@@ -114,8 +112,6 @@ foreach($this->getServer()->getOnlinePlayers() as $player) {
           return true;
       }
   }
-
-
 	if($cmd->getName() == "night") {
    	if($sender instanceof Player) {
    	 if($sender->hasPermission("night.use")) {
@@ -133,6 +129,7 @@ if($cmd->getName() == "nv") {
 		if($sender->hasPermission("nv.use")) 
 			if(!empty($args[0])) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>");
+			}
 			  if($args[0] == "on")
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 				$sender->sendMessage($this->fts . TF::GREEN . " Night vision activated");
@@ -152,12 +149,12 @@ if($cmd->getName() == "nv") {
 	     }
 	  }
       }
- 
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
 			if(!empty($args[0])) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /vanish <on/off>");
+			}
 			  if($args[0] == "on") {
                                 $sender->setDisplayName($sender->getName());
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::INVISIBILITY), (99999999*20), (1), (false)));
@@ -177,11 +174,10 @@ if($cmd->getName() == "vanish") {
 	  return true;
 	     }
 	  }
-      }
 }
  
 	if($cmd->getName() == "fly"){
-        if($sender->instanceof Player){
+        if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
 			if(!empty($args[0])) {
 		 		$sender->sendMessage($this->fts . TF::RED . "Syntax fly <on/off>");
@@ -196,10 +192,7 @@ if($cmd->getName() == "vanish") {
 		     }
 		  }else{
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
-		
 	  return true;
 	     }
 	  }
       }
-   }
-}
